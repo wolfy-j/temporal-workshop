@@ -1,5 +1,0 @@
-2021/04/15 17:11:53     INFO    server          [debug] book flight for "Antony"
-2021/04/15 17:11:53     INFO    server          [debug] book hotel for "Antony"
-2021/04/15 17:11:53     INFO    server          [debug] reserve car for "Antony"
-2021/04/15 17:11:54     INFO    server          [debug] cancel hotel reservation "4e987c83-a88b-4c95-be2a-80b9628db963" for "Antony"
-2021/04/15 17:11:54     INFO    server          [debug] cancel flight reservation "34e38e86-d33a-460b-9f6c-ed14e7f02422" for "Antony"
