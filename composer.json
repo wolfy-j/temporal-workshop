@@ -1,0 +1,18 @@
+{
+  "minimum-stability": "beta",
+  "autoload": {
+    "psr-4": {
+      "Workshop\\": "src/"
+    }
+  },
+  "require": {
+    "psr/log": "^1.1",
+    "temporal/sdk": "^1.0@RC",
+    "spiral/roadrunner": "2.0-rc3",
+    "spiral/tokenizer": "^2.7",
+    "symfony/console": "^5.2",
+    "nyholm/psr7": "^1.4",
+    "league/csv": "^9.6",
+    "spiral/exceptions": "^2.7"
+  }
+}

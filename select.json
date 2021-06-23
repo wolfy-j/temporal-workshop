@@ -1,0 +1,82 @@
+{
+  "component2": {
+    "auto-fill": true,
+    "required": true,
+    "conditions": [
+      {
+        "type": "mapping",
+        "value": "@component1.id",
+        "property": "group",
+        "mapping": {
+          "7TR-04": "04Z",
+          "7TR-04": "04Z",
+          "7TR-04": "04Z",
+          "7TR-04": "04Z"
+        }
+      },
+      {
+        "type": "attribute",
+        "name": "outer-diameter",
+        "value": "@user.outer-diameter",
+        "value2": "@component1.attribute.diameter"
+      },
+      {
+        "type": "attribute",
+        "name": "inner-diameter",
+        "value": "@user.inner-diameter",
+        "value2": "@component1.attribute.diameter"
+      }
+    ]
+  },
+  "component3": {
+    "auto-fill": true,
+    "required": true,
+    "values": {
+      "quantity": {
+        "type": "mapped",
+        "name": "outer-diameter",
+        "value": "@component1.number-of-lights"
+      }
+    },
+    "conditions": [
+      {
+        "type": "mapping",
+        "value": "@component2.id",
+        "property": "id",
+        "mapping": {
+          "04-a": "04-sl",
+          "04-a": "04-sl",
+          "04-a": "04-sl",
+          "04-a": "04-sl",
+          "04-a": "04-sl",
+          "04-a": "04-sl",
+          "04-a": "04-sl"
+        }
+      }
+    ]
+  }
+}
+
+// ------------------------------
+// [engine + data mapping]
+// base API for client interface
+// base API for import
+// admin interface (UI editor for rules, and for manual import)
+// admin and client CPQ builder (??????????)
+// ------------------------------
+
+COMPONENT (VALUE) + config:
+[
+  1) INPUT
+    a) none
+    b) user input
+    c) previous component values
+
+  2) RULES and VALUES
+    a) mapping to API to get SKU
+    b) table of values
+
+  3) output (the result of the selection)
+    a) SKU id + {attributes}
+    b) manual value
+]

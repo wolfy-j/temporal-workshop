@@ -1,0 +1,22 @@
+rpc:
+  listen: tcp://127.0.0.1:6001
+
+server:
+  command: "php worker.php"
+  env:
+    XDEBUG_SESSION: 1
+
+logs:
+  level: info
+  channels:
+    informer.mode: none
+
+temporal:
+  address: localhost:7233
+  activities:
+    num_workers: 4
+
+http:
+  address: 127.0.0.1:8080
+  pool:
+    num_workers: 2
